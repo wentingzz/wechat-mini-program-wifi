@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/index/check",
+    "pages/index/personal",
+    "pages/wifiArticle/wifiA1",
+    "pages/wifiArticle/wifiA2",
+    "pages/wifiArticle/wifiA3",
+    "pages/setting/setting",
+    "pages/setting/history"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "WiFi 安全检测",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_front.png",
+        "selectedIconPath": "images/icon_front_HL.png"
+      },
+      {
+        "pagePath": "pages/index/check",
+        "text": "检测",
+        "iconPath": "images/icon_check.png",
+        "selectedIconPath": "images/icon_check_HL.png"
+      },
+      {
+        "pagePath": "pages/index/personal",
+        "text": "我",
+        "iconPath": "images/icon_personal.png",
+        "selectedIconPath": "images/icon_personal_HL.png"
+      }
+    ]
+  }
+}
