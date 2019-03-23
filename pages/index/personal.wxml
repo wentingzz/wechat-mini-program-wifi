@@ -1,0 +1,32 @@
+<!--miniprogram/pages/index/personal.wxml-->
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+  </view>
+
+  <!-- <view class="weui-cell__bd">
+    <navigator url="../setting/history" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">我的收藏</navigator> 
+    <navigator url="../setting/help" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">帮助与反馈</navigator> 
+  </view> -->
+
+  <view class="page__bd">
+        <view class="weui-grids">
+            <block>
+              <navigator url="../setting/history" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../images/icon_collection.png" />
+                <view class="weui-grid__label">收藏</view>
+              </navigator>
+            </block>
+            <block>
+              <navigator url="../setting/help" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../images/icon_help.png" />
+                <view class="weui-grid__label">帮助</view>
+              </navigator>
+            </block>
+            <block>
+              <navigator url="../setting/feedback" class="weui-grid" hover-class="weui-grid_active">
+                <image class="weui-grid__icon" src="../../images/icon_feedback.png" />
+                <view class="weui-grid__label">反馈</view>
+              </navigator>
+            </block>
+        </view>
+    </view>

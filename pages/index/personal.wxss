@@ -1,0 +1,16 @@
+/* miniprogram/pages/index/personal.wxss */
+@import "../../dist/style/weui.wxss";
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  background-size: cover;
+  background-color: white;
+}

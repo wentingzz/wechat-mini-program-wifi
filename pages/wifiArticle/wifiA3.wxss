@@ -1,0 +1,8 @@
+/* miniprogram/pages/wifiArticle/wifiA3.wxss */
+@import "../../dist/style/weui.wxss";
+page{
+    background-color: #FFFFFF;
+}
+image{
+    margin: 4px 0;
+}

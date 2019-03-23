@@ -1,0 +1,64 @@
+<!--miniprogram/pages/wifiArticle/wifiA1.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">网络安全宣传周</view>
+    </view>
+    <view class="page__bd">
+      <view class="weui-article">
+        <view class="weui-article__h1">网络安全意识漫谈</view>
+        <view class="weui-article__h1">——WiFi安全</view>
+        <view class="weui-article__section">
+          <view class="weui-article__p">WiFi安全口诀</view>
+          <view class="weui-article__p">公共场合接WiFi，名称一定确认好；</view>
+          <view class="weui-article__p">无密WiFi不要连，安全支付用4G；</view>
+          <view class="weui-article__p">私搭路由要审批，安全设置莫忘记；</view>
+          <view class="weui-article__p">WiFi不用要关闭，万能钥匙请回避。</view>
+        </view>
+
+        <view class="weui-article__section">
+          <view class="weui-article__h2">免费WiFi接入</view>
+          <image src="../../images/A3-1.jpg" mode="aspectFit" style="height: 260px" />
+          <view class="weui-article__h2">案例分析</view>
+          <view class="weui-article__p">不法分子通常会搭建与常用WIFI名相同或相近的WIFI，设置空密码或相同密码吸引公众连接，然后在WIFI路由器上劫持DNS，将你引入到钓鱼网站获取你的账号密码，或者在路由器上监听手机流量，获取明文密码。</view>
+          <view class="weui-article__h2">安全建议</view>
+          <view class="weui-article__p">1 在公共场合连接WIFI时请同商家仔细确认WIFI名称。</view>
+          <view class="weui-article__p">2 没有密码的公共WiFi慎用。</view>
+          <view class="weui-article__p">3 在使用支付APP时请使用运营商4G网络，不要使用公共WIFI。</view>
+        </view>
+        
+        <view class="weui-article__section">
+          <view class="weui-article__h2">私搭WiFi热点</view>
+          <image src="../../images/A3-2.jpg" mode="aspectFit" style="height: 260px" />
+          <view class="weui-article__h2">案例分析</view>
+          <view class="weui-article__p">无线路由器有较多的安全隐患，比如之前的wep认证能很轻易破解。个人架设无线路由器，如果配置不当，家用最多导致蹭网或个人资料泄露，但在单位使用可能会导致内网被入侵，单位机密、客户资料泄密，后果不堪设想。</view>
+          <view class="weui-article__h2">安全建议</view>
+          <view class="weui-article__p">1 在办公网络架设无线路由器必须经过单位批准并进行安全检查。</view>
+          <view class="weui-article__p">2 认证方式使用安全的WPA2算法。</view>
+          <view class="weui-article__p">3 建议隐藏SSID，绑定接入设备的MAC地址。</view>
+          <view class="weui-article__p">4 WIFI密码必须8位以上，包含大小写、数字和标点符号，定期改密码。</view>
+        </view>
+        
+        <view class="weui-article__section">
+          <view class="weui-article__h2">WiFi自动连接</view>
+          <image src="../../images/A3-3.jpg" mode="aspectFit" style="height: 260px" />
+          <view class="weui-article__h2">案例分析</view>
+          <view class="weui-article__p">一些手机在搜索到不是同一个WIFI热点但名称相同的WIFI时也会自动使用保存的密码连接，这就给黑客以可乘之机。</view>
+          <view class="weui-article__h2">安全建议</view>
+          <view class="weui-article__p">1 日常不用WIFI时关闭手机和笔记本的无线局域网功能，以防自动连接恶意WIFI。</view>
+          <view class="weui-article__p">2 当手机或笔记本连接上WIFI后，留意连接到的WIFI热点名称。</view>
+        </view>
+
+        <view class="weui-article__section">
+          <view class="weui-article__h2">WiFi万能钥匙</view>
+          <image src="../../images/A1-4.jpg" mode="aspectFit" style="height: 260px" />
+          <view class="weui-article__h2">案例分析</view>
+          <view class="weui-article__p">手机上的WIFI万能钥匙类的APP在安装后默认设置会自动上传你所连接的WIFI的密码。这些密码一般不会明文给出，只会在连接WIFI时自动输入，但曾爆出漏洞用一个APP能读出检测到WIFI的密码，这样就可以用笔记本接入WIFI使用更强大的攻击工具了。</view>
+          <view class="weui-article__h2">安全建议</view>
+          <view class="weui-article__p">1 建议不要使用WIFI万能钥匙类APP。</view>
+          <view class="weui-article__p">2 如果必须使用建议关掉自动</view>
+        </view>
+
+        <view class="weui-footer__text">来源：上财信息办</view>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<!--miniprogram/pages/setting/setting.wxml-->
+
+<view class="page__hd">
+  <view class="page__desc">帮助</view>
+  <view class="weui-article__section">
+    <view class="weui-article__h2">问：Wifi与WLAN的区别？</view>
+    <view class="weui-article__p">答：……</view>
+    <view class="weui-article__h2">问：……</view>
+    <view class="weui-article__p">答：……</view>
+  </view>
+</view>

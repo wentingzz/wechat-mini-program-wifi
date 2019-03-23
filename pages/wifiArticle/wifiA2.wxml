@@ -1,0 +1,24 @@
+<!--miniprogram/pages/wifiArticle/wifiA1.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">2017年国家网络安全宣传周</view>
+    </view>
+    <view class="page__bd">
+      <view class="weui-article">
+        <view class="weui-article__h1">如何安全使用WIFI</view>
+        <view class="weui-article__section">
+          <view class="weui-article__p">9月16日至24日，中央宣传部、中央网信办、教育部、工业和信息化部、公安部、中国人民银行、国家新闻出版广电总局、全国总工会、共青团中央等九部门共同举办2017年国家网络安全宣传周。本次活动以“网络安全为人民，网络安全靠人民”为主题，号召全民增强网络安全意识、学习网络安全知识。</view>
+          <view class="weui-article__p">青岛银行积极参与本次活动，在人民银行的统一部署下，通过社会大众喜闻乐见的官方微信、LED大屏播放、宣传片视频播放、分支行LED、营业厅发放宣传材料等多种渠道和形式，结合安全创新的金融平台和业务品种，多角度、多形式向公众开展网络安全宣传活动。</view>
+          <view class="weui-article__p">网络安全与我们的生活息息相关。今天让我们来看看如何安全使用WiFi。</view>
+        </view>
+
+        <view class="weui-article__section">
+          <image src="../../images/A2-1.jpg" mode="aspectFit" style="height: 900px"/>
+          <image src="../../images/A2-2.jpg" mode="aspectFit" style="height: 900px" />
+          <image src="../../images/A2-3.jpg" mode="aspectFit" style="height: 730px" />
+          <image src="../../images/A2-4.jpg" mode="aspectFit" style="height: 730px" />
+        </view>
+        <view class="weui-footer__text">文章来源：搜狐网</view>
+      </view>
+    </view>
+</view>

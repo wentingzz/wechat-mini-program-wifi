@@ -1,0 +1,6 @@
+<!--check.wxml-->
+<view wx:for="{{array}}">{{item}}</view>
+<textarea>
+{{msg}}
+</textarea>
+<button bindtap="connectWifi">Connect Wifi</button>

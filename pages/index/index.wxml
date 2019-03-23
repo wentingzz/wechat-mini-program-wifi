@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view>
+  <scroll-view class="image-group" scroll-x="true">
+    <image src="../../images/1.jpg"></image>
+    <image src="../../images/2.jpg"></image>
+    <image src="../../images/3.jpg"></image>
+  </scroll-view>
+
+  <view class="page">  
+    <view class="page__bd">  
+        <!--用name 定义模版-->  
+        <template name="msgTemp">  
+            <!--  
+            1. scaleToFill : 图片全部填充显示，可能导致变形 默认  
+            2. aspectFit ： 图片全部显示，以最长边为准  
+            3. aspectFill ： 图片全部显示，以最短边为准  
+            4. widthFix ： 宽不变，全部显示图片  
+            -->  
+            <view class="weui-panel__bd">  
+                <navigator url="../wifiArticle/wifiA{{id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">  
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">  
+                        <image class="weui-media-box__thumb" src="{{src}}" style="width: 60px; height: 60px;"/>  
+                    </view>  
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">  
+                        <view class="weui-media-box__title">{{title}}</view>  
+                        <view class="weui-media-box__desc">{{time}}</view>  
+                    </view>  
+                </navigator>  
+            </view>  
+        </template>  
+        <view class="weui-panel weui-panel_access">  
+            <view class="weui-panel__hd">文章列表</view>  
+                <view wx:for-items="{{msgList}}" wx:key="{{item.id}}">  
+                    <view class="kind-list__item">  
+                        <!--用is 使用模版-->  
+                        <template is="msgTemp" data="{{...item}}"/>  
+                    </view>  
+                </view>  
+            <view class="weui-panel__ft">  
+                <view class="weui-cell weui-cell_access weui-cell_link">  
+                    <view class="weui-cell__bd">查看更多</view>  
+                    <view class="weui-cell__ft weui-cell__ft_in-access"></view>  
+                </view>  
+            </view>  
+        </view>  
+    </view>  
+    <view class="page__ft">  
+    </view>  
+  </view>
+</view>
