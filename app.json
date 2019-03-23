@@ -1,19 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
     "pages/index/check",
     "pages/index/personal",
     "pages/wifiArticle/wifiA1",
     "pages/wifiArticle/wifiA2",
     "pages/wifiArticle/wifiA3",
-    "pages/setting/setting",
-    "pages/setting/history"
+    "pages/setting/help",
+    "pages/setting/history",
+    "pages/setting/feedback"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
