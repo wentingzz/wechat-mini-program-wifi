@@ -2,6 +2,8 @@
 <view class="page">
     <view class="page__hd">
         <view class="page__title">2017年国家网络安全宣传周</view>
+        <button wx:if="{{!like}}" size="mini" catchtap="addcollection">收藏</button>
+        <button wx:if="{{like}}" size="mini" catchtap="removecollection">取消收藏</button>
     </view>
     <view class="page__bd">
       <view class="weui-article">

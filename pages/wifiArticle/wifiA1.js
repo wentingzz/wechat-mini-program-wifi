@@ -5,16 +5,67 @@ Page({
    * Page initial data
    */
   data: {
-
+    like:"",
+    aid:""
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const db = wx.cloud.database()
+    db.collection('articles').where({
+      id: "1"
+    }).get({
+      success: res => {
+        this.setData({
+          aid: res.data[0]._id,
+          like: res.data[0].like
+        })
+        // console.log(this.data.aid)
+      }
+    })
   },
 
+  addcollection: function(){
+    const db = wx.cloud.database()
+    db.collection('articles').doc(this.data.aid).update({
+      data: {
+        like: true
+      }
+    })
+    db.collection('articles').where({
+      id: "1"
+    }).get({
+      success: res => {
+        this.setData({
+          aid: res.data[0]._id,
+          like: res.data[0].like
+        })
+        // console.log(this.data.aid)
+      }
+    })
+  },
+
+  removecollection: function () {
+    const db = wx.cloud.database()
+    db.collection('articles').doc(this.data.aid).update({
+      data: {
+        like: false
+      }
+    })
+    db.collection('articles').where({
+      id: "1"
+    }).get({
+      success: res => {
+        this.setData({
+          aid: res.data[0]._id,
+          like: res.data[0].like
+        })
+        // console.log(this.data.aid)
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
