@@ -1,185 +1,80 @@
-// pages/check.js
 Page({
-
-  /**
-   * Page initial data
-   */
   data: {
-
-    accountNumber: '',//Wi-Fi 的SSID，即账号
-
-    bssid: '',//Wi-Fi 的ISSID
-
-    password: '',//Wi-Fi 的密码
-
-
-
+    inputShowed: false,
+    inputVal: "",
+    wifilist: [],
+    name: "",
+    mac: "",
+    max_speed: "",
+    signal:"",
+    encryption:"",
+    red: "",
+    display: false
   },
-
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    wx.startWifi({
-      success: function (res) {
-        console.log(res.errMsg)
-      },
-      fail: function(res){
-        console.log(res.errMsg)
+    const db = wx.cloud.database()
+    db.collection('wifis').where({
+      inuse: true
+    }).get({
+      success: res => {
+        this.setData({
+          wifilist: res.data
+        })
+        // console.log(this.data.wifilist)
       }
     })
-    wx.onGetWifiList(function (res) {
-      console.log("onGet")
-      var a = res.wifiList;
-      var showlist = that.data.showlist;
-      that.setData({
-        showlist: a
-      })
-      console.log(a);
+  },
+
+  showInput: function () {
+    this.setData({
+      inputShowed: true
     });
-    wx.getWifiList({
-      success(res) {
-        console.log(res)
-        console.log(wx.onGetWifiList())
-      },
-      fail(res) {
-        console.log(res)
-      }
-    })
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false,
+      display: false
+    });
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: "",
+      display: false
+    });
     
-    wx.getWifiList()
-
-    // wx.startWifi({
-    //   success: function (res) {
-    //     wx.getWifiList({
-    //     })
-    //     console.log(res.wifiList)
-    //   },
-    //   fail: function(res){
-    //     console.log(res.errMsg)
-    //   }
-    // })
-    
-    console.log("check page");
   },
-
-  connectWifi: function () {
-
-    var that = this;
-
-    //检测手机型号
-
-    wx.getSystemInfo({
-
-      success: function (res) {
-
-        var system = '';
-
-        if (res.platform == 'android') system = parseInt(res.system.substr(8));
-
-        if (res.platform == 'ios') system = parseInt(res.system.substr(4));
-
-        if (res.platform == 'android' && system < 6) {
-
-          wx.showToast({
-
-            title: '手机版本不支持',
-
-          })
-
-          return
-
-        }
-
-        if (res.platform == 'ios' && system < 11.2) {
-
-          wx.showToast({
-
-            title: '手机版本不支持',
-
-          })
-
-          return
-
-        }
-
-
-
-        //2.初始化 Wi-Fi 模块
-
-        that.startWifi();
-
-      }
-
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+    this.setData({
+      name: "",
+      mac: "",
+      max_speed: "",
+      encryption: "",
+      signal: "",
+      red: "",
+      display: false
     })
-
-  },
-
-  //初始化 Wi-Fi 模块
-
-  startWifi: function () {
-
-    var that = this
-
-    wx.startWifi({
-
-      success: function () {
-
-        //请求成功连接Wifi
-
-        that.Connected();
-
-      },
-
-      fail: function (res) {
-
-        wx.showToast({
-
-            title: '接口调用失败',
-
+    for(var i = 0; i < 3; ++i){
+      if (this.data.wifilist[i].name == this.data.inputVal){
+        this.setData({
+          name : this.data.wifilist[i].name,
+          mac: this.data.wifilist[i].mac,
+          max_speed: this.data.wifilist[i].max_speed,
+          encryption: this.data.wifilist[i].encryption,
+          signal: this.data.wifilist[i].signal,
+          red: this.data.wifilist[i].red,
+          display: true
         })
-
+        break
       }
-
-    })
-
-  },
-
-  Connected: function () {
-
-    var that = this
-
-    wx.connectWifi({
-
-      SSID: that.data.accountNumber,
-
-      BSSID: that.data.bssid,
-
-      password: that.data.password,
-
-      success: function (res) {
-
-        wx.showToast({
-
-          title: 'wifi连接成功',
-
-        })
-
-      },
-
-      fail: function (res) {
-
-        wx.showToast({
-
-          title: 'wifi连接失败',
-
-        })
-
-      }
-
-    })
-
+    }
   },
 
   /**
@@ -230,4 +125,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+});
